@@ -1,83 +1,111 @@
-# Fanavotana — Plateforme communautaire
+# Fanavotana — Un espace de partage et de ressources pour une communauté chrétienne
 
-> Réunir contenus, échanges et diffusion en direct dans une application web dédiée à une communauté chrétienne malgache.
+**En bref :** une plateforme pensée pour réunir les échanges entre membres, les événements et les ressources chrétiennes dans un même espace.
 
-**Domaines :** Développement full stack · API Python · Temps réel · Gestion de contenus
+[English version below](#english-version)
 
-## Le besoin
+## Le projet
 
-Une communauté souhaite accéder à ses ressources, partager des publications, échanger et suivre des événements dans un espace cohérent. Le projet associe une dimension sociale à des contenus de lecture et d'apprentissage.
+Fanavotana est un projet de plateforme communautaire destiné à faciliter le partage et l'accès à différentes ressources. Il rassemble des fonctions sociales, des outils de communication et des contenus de lecture ou d'apprentissage adaptés à une communauté chrétienne malgache.
 
-Fanavotana rassemble ces usages autour d'une interface React et d'un backend FastAPI.
+## Quels besoins cela aide-t-il à couvrir ?
 
-## Périmètre de réalisation
+- Partager des publications et échanger avec d’autres membres.
+- Envoyer des messages privés ou participer à des conversations de groupe.
+- Publier des événements et gérer les inscriptions.
+- Consulter des ressources bibliques, des cantiques et des enseignements.
+- Retrouver des photos, des vidéos et d’autres contenus partagés.
+- Organiser les responsabilités des membres, des responsables et des administrateurs.
 
-- Interface web et API organisées par domaines fonctionnels.
-- Modélisation des données et migrations PostgreSQL.
-- Authentification, profils et permissions.
-- Messagerie en temps réel et intégration de services multimédias.
-- Tests et automatisation des contrôles de qualité.
+## Exemples de fonctions présentées
 
-## Fonctionnalités
-
-| Domaine | Capacités |
+| Besoin | Ce que la plateforme présente |
 |---|---|
-| Communauté | Profils, abonnements, fil d'actualité, réactions et commentaires |
-| Messagerie | Conversations privées et de groupe, échanges en temps réel |
-| Événements | Publications d'événements et inscriptions |
-| Direct | Gestion des diffusions, intégration LiveKit et référencement des replays |
-| Baiboly | Lecture biblique, recherche, favoris, annotations et plans de lecture |
-| Fihirana | Collections de cantiques, favoris, historique et permissions d'accès |
-| Enseignements | Catégories, brouillons, publication et export PDF |
-| Médias | Galerie, albums et bibliothèque de médias |
-| Recherche | Recherche unifiée dans plusieurs types de contenus |
-| Administration | Backoffice et gestion des accès selon les rôles |
+| Participer à la communauté | Profils, fil de publications, réactions et commentaires |
+| Communiquer | Conversations privées et de groupe |
+| Organiser des événements | Publication d’événements et inscriptions |
+| Consulter des ressources bibliques | Lecture, recherche, favoris, notes et plans de lecture |
+| Retrouver des cantiques et enseignements | Collections de cantiques et contenus d’enseignement |
+| Partager des médias | Albums, galerie et bibliothèque de contenus |
+| Suivre des diffusions | Fonctions prévues pour organiser des diffusions en direct et retrouver des replays, selon la configuration |
 
-La diffusion en direct et les services externes nécessitent leur configuration dans l'environnement de l'application.
+Certaines fonctions, notamment les diffusions en direct et les services multimédias, nécessitent des services complémentaires correctement configurés.
 
-## Exemple de parcours
+## Exemple d’utilisation
 
-Un membre consulte une publication, échange dans une conversation, retrouve un cantique et reprend son plan de lecture. Un responsable prépare un enseignement ou programme une diffusion, avec des permissions adaptées à son rôle.
+Un membre peut consulter une publication, participer à une conversation, retrouver un cantique ou reprendre un plan de lecture. Un responsable peut préparer un enseignement ou organiser un événement en fonction des autorisations qui lui sont accordées.
 
-## Architecture technique
+## À qui ce projet peut-il être utile ?
 
-| Couche | Technologies |
-|---|---|
-| Frontend | React 19, TypeScript, Vite, Tailwind CSS |
-| État de l'interface | Zustand |
-| Backend | Python, FastAPI, SQLAlchemy 2 |
-| Données et migrations | PostgreSQL, Alembic |
-| Authentification | JWT avec renouvellement, intégration Google OAuth |
-| Échanges en temps réel | Socket.IO |
-| Diffusion en direct | LiveKit |
-| Médias | Cloudinary |
-| Qualité | pytest, Ruff, Vitest, React Testing Library, ESLint |
-| Automatisation | GitHub Actions |
+- Aux communautés chrétiennes qui souhaitent réunir leurs échanges et leurs ressources.
+- Aux responsables qui organisent des événements et partagent des enseignements.
+- Aux membres qui veulent retrouver facilement les contenus de leur communauté.
 
-## Points d'ingénierie
+## Ce que ce projet illustre
 
-- **Organisation par domaine :** séparer les fonctions communautaires, éditoriales et administratives.
-- **Continuité de session :** gérer le renouvellement des jetons côté client.
-- **Évolution des données :** utiliser des migrations Alembic pour suivre le schéma PostgreSQL.
-- **Permissions :** distinguer les usages des membres, responsables et administrateurs.
-- **Qualité :** prévoir des contrôles backend et frontend, ainsi que des tests sur une base dédiée.
+Fanavotana illustre la conception d’un espace numérique où les échanges communautaires et les ressources de lecture peuvent se compléter. La présentation décrit les fonctions du projet sans prétendre qu’un service public est déjà déployé ou prêt à accueillir des utilisateurs.
 
-La documentation du projet décrit une chaîne de contrôles automatisés incluant lint, tests, migrations, vérification TypeScript et build. Cette présentation ne prétend pas certifier l'état courant de leur exécution.
+## État du projet
 
-## Ce que ce projet démontre
-
-La conception d'une application complète associant API, interface typée, base relationnelle, contenus, permissions et interactions en temps réel.
-
-L'apport fonctionnel est de réunir les ressources et les échanges de la communauté dans un même produit. Aucun nombre d'utilisateurs ni résultat de performance non mesuré n'est annoncé.
+Ce dépôt est une **présentation de portfolio**. Il ne contient pas l’application complète ni de données réelles de membres. Certaines fonctions nécessitent une configuration supplémentaire avant de pouvoir être utilisées.
 
 ## À propos
 
 Projet présenté par [Elia Randriantsiory](https://github.com/EliaRandriantsiory).
 
-Ce dépôt est une **présentation de portfolio**. Il ne contient pas le code source de l'application, ni de données métier, de configuration de production ou d'identifiants. Les technologies tierces restent la propriété de leurs auteurs respectifs.
+---
 
-### Autres réalisations
+## English version
 
-- [Odoo ERP — Personnalisation métier](https://github.com/EliaRandriantsiory/odoo-erp-showcase)
-- [RNT Server Manager — Administration Linux](https://github.com/EliaRandriantsiory/rnt-server-manager-showcase)
-- [Fanavotana — Plateforme communautaire](https://github.com/EliaRandriantsiory/fanavotana-showcase)
+# Fanavotana — A sharing space and resource hub for a Christian community
+
+**In brief:** a platform concept that brings member conversations, events, and Christian resources together in one place.
+
+## About the project
+
+Fanavotana is a community platform project designed to make sharing and accessing resources easier. It brings together social features, communication tools, and reading or learning materials for a Malagasy Christian community.
+
+## Which needs can it help address?
+
+- Share posts and connect with other members.
+- Send private messages or join group conversations.
+- Publish events and manage registrations.
+- Access Bible resources, hymns, and teaching materials.
+- Find photos, videos, and other shared content.
+- Organize responsibilities for members, leaders, and administrators.
+
+## Examples of the functions presented
+
+| Need | What the platform demonstrates |
+|---|---|
+| Take part in the community | Profiles, a post feed, reactions, and comments |
+| Communicate | Private and group conversations |
+| Organize events | Event publishing and registrations |
+| Access Bible resources | Reading, search, favorites, notes, and reading plans |
+| Find hymns and teachings | Hymn collections and teaching materials |
+| Share media | Albums, a gallery, and a content library |
+| Follow broadcasts | Features for organizing live broadcasts and finding replays, depending on configuration |
+
+Some features, especially live broadcasts and media services, require additional services to be configured correctly.
+
+## Example use
+
+A member can read a post, join a conversation, find a hymn, or continue a reading plan. A community leader can prepare teaching material or organize an event according to their permissions.
+
+## Who may find this project useful?
+
+- Christian communities that want to bring conversations and resources together.
+- Leaders who organize events and share teaching materials.
+- Members who want to find their community's content more easily.
+
+## What this project demonstrates
+
+Fanavotana demonstrates the idea of a digital space where community interaction and reading resources support each other. This presentation describes the project's functions; it does not claim that a public service has already been deployed or is ready for users.
+
+## Project status
+
+This repository is a **portfolio presentation**. It does not contain the complete application or real member data. Some features require additional setup before they can be used.
+
+## About
+
+Presented by [Elia Randriantsiory](https://github.com/EliaRandriantsiory).

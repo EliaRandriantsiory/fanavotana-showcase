@@ -1,111 +1,140 @@
-# Fanavotana — Un espace de partage et de ressources pour une communauté chrétienne
+# Fanavotana — L'application de toute une église, en malgache
 
-**En bref :** une plateforme pensée pour réunir les échanges entre membres, les événements et les ressources chrétiennes dans un même espace.
+**En bref :** une plateforme web pour l'église FIKJ. Les membres y lisent la Bible en
+malgache, chantent avec les recueils de cantiques, suivent les cultes en direct et
+échangent entre eux, au même endroit.
+
+🔗 **En ligne :** [fanavotana-fikj.com](https://fanavotana-fikj.com/)
 
 [English version below](#english-version)
 
-## Le projet
+---
 
-Fanavotana est un projet de plateforme communautaire destiné à faciliter le partage et l'accès à différentes ressources. Il rassemble des fonctions sociales, des outils de communication et des contenus de lecture ou d'apprentissage adaptés à une communauté chrétienne malgache.
+## Le besoin
 
-## Quels besoins cela aide-t-il à couvrir ?
+La vie d'une église passe par de nombreux supports : Bible papier, recueils de cantiques,
+groupes de discussion sur les réseaux sociaux, annonces orales, vidéos dispersées.
+Les membres éloignés ou empêchés perdent vite le fil.
 
-- Partager des publications et échanger avec d’autres membres.
-- Envoyer des messages privés ou participer à des conversations de groupe.
-- Publier des événements et gérer les inscriptions.
-- Consulter des ressources bibliques, des cantiques et des enseignements.
-- Retrouver des photos, des vidéos et d’autres contenus partagés.
-- Organiser les responsabilités des membres, des responsables et des administrateurs.
+Fanavotana réunit tout cela dans une seule application, en malgache, accessible depuis
+un téléphone ou un ordinateur.
 
-## Exemples de fonctions présentées
+## Ce que l'application permet
 
-| Besoin | Ce que la plateforme présente |
-|---|---|
-| Participer à la communauté | Profils, fil de publications, réactions et commentaires |
-| Communiquer | Conversations privées et de groupe |
-| Organiser des événements | Publication d’événements et inscriptions |
-| Consulter des ressources bibliques | Lecture, recherche, favoris, notes et plans de lecture |
-| Retrouver des cantiques et enseignements | Collections de cantiques et contenus d’enseignement |
-| Partager des médias | Albums, galerie et bibliothèque de contenus |
-| Suivre des diffusions | Fonctions prévues pour organiser des diffusions en direct et retrouver des replays, selon la configuration |
+### 📖 Baiboly : lire et étudier la Bible
 
-Certaines fonctions, notamment les diffusions en direct et les services multimédias, nécessitent des services complémentaires correctement configurés.
+- Choisir un livre, un chapitre et des versets en trois touches.
+- **Surligner** un verset (5 couleurs) et y ajouter **une note personnelle**.
+- Garder ses versets favoris et retrouver l'historique de lecture.
+- Suivre un **plan de lecture** : une barre montre la progression sur les 1 189 chapitres de la Bible.
+- Rechercher un mot dans toute la Bible.
 
-## Exemple d’utilisation
+### 🎵 Fihirana : les recueils de cantiques
 
-Un membre peut consulter une publication, participer à une conversation, retrouver un cantique ou reprendre un plan de lecture. Un responsable peut préparer un enseignement ou organiser un événement en fonction des autorisations qui lui sont accordées.
+- **Trois recueils** consultables, avec recherche par numéro ou par titre.
+- **Changement de tonalité** en un clic, pour adapter un chant à la voix ou à l'instrument.
+- Cantiques favoris et historique des 50 derniers chants consultés.
 
-## À qui ce projet peut-il être utile ?
+### 🎙️ Fampianarana : les enseignements
 
-- Aux communautés chrétiennes qui souhaitent réunir leurs échanges et leurs ressources.
-- Aux responsables qui organisent des événements et partagent des enseignements.
-- Aux membres qui veulent retrouver facilement les contenus de leur communauté.
+- Les responsables rédigent et publient les enseignements.
+- Lecture en plein écran au format page A4, et **export PDF** pour l'impression.
+- Les enseignements publiés sont aussi lisibles sans compte.
 
-## Ce que ce projet illustre
+### 📺 Cultes et événements en direct
 
-Fanavotana illustre la conception d’un espace numérique où les échanges communautaires et les ressources de lecture peuvent se compléter. La présentation décrit les fonctions du projet sans prétendre qu’un service public est déjà déployé ou prêt à accueillir des utilisateurs.
+- Diffusion en direct depuis l'application, avec le nombre de spectateurs.
+- **Rediffusions** pour ceux qui n'ont pas pu suivre.
+- Annonce des événements, avec inscriptions.
 
-## État du projet
+### 💬 La vie de la communauté
 
-Ce dépôt est une **présentation de portfolio**. Il ne contient pas l’application complète ni de données réelles de membres. Certaines fonctions nécessitent une configuration supplémentaire avant de pouvoir être utilisées.
+- Un fil d'actualité où l'on partage textes, vidéos, liens et documents.
+- Réactions adaptées : ❤️ j'aime, 🙏 je prie, ✝️ amen.
+- Messages privés et conversations de groupe, **en temps réel**.
+- Albums photos et bibliothèque de médias.
+
+### 🔐 Chacun son rôle
+
+Trois niveaux d'accès : **membre**, **responsable** et **administrateur**. Un espace
+d'administration permet de gérer les membres, de modérer les publications et d'organiser
+les lives. L'accès à certains recueils peut être demandé puis accordé par un administrateur.
+
+## Vue d'ensemble
+
+```mermaid
+flowchart LR
+    M["👤 Membres<br/>téléphone ou ordinateur"] <--> A["⛪ Fanavotana"]
+    R["🧑‍🏫 Responsables"] -- "enseignements,<br/>événements, lives" --> A
+    AD["🛠️ Administrateurs"] -- "membres,<br/>modération" --> A
+    A --- B["📖 Bible"]
+    A --- H["🎵 Cantiques"]
+    A --- L["📺 Direct"]
+    A --- C["💬 Échanges"]
+```
+
+## Mon rôle
+
+J'ai conçu et développé l'application de bout en bout :
+
+- définition des besoins avec l'église ;
+- conception des écrans, pensés d'abord pour le téléphone ;
+- développement de l'application et de son serveur ;
+- plus de 150 vérifications automatiques pour éviter les régressions ;
+- mise en ligne et sauvegardes de la base de données.
+
+<details>
+<summary><b>Pour les curieux : les outils utilisés</b></summary>
+
+<br>
+
+React 19, TypeScript, Tailwind CSS, Python (FastAPI), PostgreSQL, Socket.IO (temps réel),
+LiveKit (vidéo en direct), Cloudinary (médias), connexion avec Google.
+
+</details>
+
+> **Note** — Ce dépôt présente le projet. Le code source et les données des membres restent privés.
 
 ## À propos
 
-Projet présenté par [Elia Randriantsiory](https://github.com/EliaRandriantsiory).
+Projet réalisé par [Elia Randriantsiory](https://github.com/EliaRandriantsiory).
 
 ---
 
 ## English version
 
-# Fanavotana — A sharing space and resource hub for a Christian community
+# Fanavotana — A whole church's app, in Malagasy
 
-**In brief:** a platform concept that brings member conversations, events, and Christian resources together in one place.
+**In brief:** a web platform for the FIKJ church. Members read the Bible in Malagasy,
+sing from the hymnals, follow services live, and talk with each other in one place.
 
-## About the project
+🔗 **Live:** [fanavotana-fikj.com](https://fanavotana-fikj.com/)
 
-Fanavotana is a community platform project designed to make sharing and accessing resources easier. It brings together social features, communication tools, and reading or learning materials for a Malagasy Christian community.
+### The need
 
-## Which needs can it help address?
+Church life is spread across paper Bibles, hymn books, social media groups, spoken
+announcements, and scattered videos. Members who live far away or cannot attend lose
+track quickly. Fanavotana brings it all together in one app, in Malagasy, on phone or computer.
 
-- Share posts and connect with other members.
-- Send private messages or join group conversations.
-- Publish events and manage registrations.
-- Access Bible resources, hymns, and teaching materials.
-- Find photos, videos, and other shared content.
-- Organize responsibilities for members, leaders, and administrators.
+### What it does
 
-## Examples of the functions presented
+- **Bible (Baiboly):** quick book and verse selection, highlights in five colors,
+  personal notes, favorites, reading history, a reading plan across all 1,189 chapters,
+  and full-text search.
+- **Hymns (Fihirana):** three hymnals, search by number or title, **one-click key change**,
+  favorites, and history.
+- **Teachings (Fampianarana):** written by leaders, readable full-screen in A4 layout,
+  exportable to PDF, and public once published.
+- **Live services and events:** live streaming with viewer count, replays, and event registrations.
+- **Community:** a news feed, reactions (❤️ like, 🙏 pray, ✝️ amen), real-time private and
+  group messages, photo albums, and a media library.
+- **Roles:** member, leader, and administrator, with an admin area for members, moderation, and lives.
 
-| Need | What the platform demonstrates |
-|---|---|
-| Take part in the community | Profiles, a post feed, reactions, and comments |
-| Communicate | Private and group conversations |
-| Organize events | Event publishing and registrations |
-| Access Bible resources | Reading, search, favorites, notes, and reading plans |
-| Find hymns and teachings | Hymn collections and teaching materials |
-| Share media | Albums, a gallery, and a content library |
-| Follow broadcasts | Features for organizing live broadcasts and finding replays, depending on configuration |
+### My role
 
-Some features, especially live broadcasts and media services, require additional services to be configured correctly.
+I designed and built the app end to end: requirements with the church, mobile-first
+screens, the app and its server, more than 150 automated checks, deployment, and database backups.
 
-## Example use
+> **Note** — This repository presents the project. Source code and member data remain private.
 
-A member can read a post, join a conversation, find a hymn, or continue a reading plan. A community leader can prepare teaching material or organize an event according to their permissions.
-
-## Who may find this project useful?
-
-- Christian communities that want to bring conversations and resources together.
-- Leaders who organize events and share teaching materials.
-- Members who want to find their community's content more easily.
-
-## What this project demonstrates
-
-Fanavotana demonstrates the idea of a digital space where community interaction and reading resources support each other. This presentation describes the project's functions; it does not claim that a public service has already been deployed or is ready for users.
-
-## Project status
-
-This repository is a **portfolio presentation**. It does not contain the complete application or real member data. Some features require additional setup before they can be used.
-
-## About
-
-Presented by [Elia Randriantsiory](https://github.com/EliaRandriantsiory).
+Built by [Elia Randriantsiory](https://github.com/EliaRandriantsiory).
